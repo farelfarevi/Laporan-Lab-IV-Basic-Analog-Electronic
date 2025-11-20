@@ -23,7 +23,8 @@ Sensor suhu IC LM35 adalah komponen elektronik yang berfungsi mengubah suhu menj
   - Tidak memerlukan kalibrasi tambahan.
 
 Formula output sensor:
-\[ V_{out} = Temperature \times 10 \, \text{mV} \]
+Vout = Temperature × 10 mV
+
 
 ### 3. Peralatan
 
