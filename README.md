@@ -99,9 +99,9 @@ Membuka Serial Monitor untuk melihat hasil pembacaan suhu.
 
 6. Screenshot Prosedur Praktikum
 
-(Isi dengan screenshot kamu sendiri nanti)
 
-(![WhatsApp Image 2025-11-21 at 02 58 36_a87aa0a2](https://github.com/user-attachments/assets/94b8711e-b955-47d0-840e-1c0fc9d3fcf0)
+
+WhatsApp Image 2025-11-21 at 02 58 36_a87aa0a2](https://github.com/user-attachments/assets/94b8711e-b955-47d0-840e-1c0fc9d3fcf0
 
 
 7. Source Code Arduino
