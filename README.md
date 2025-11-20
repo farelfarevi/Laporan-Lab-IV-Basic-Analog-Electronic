@@ -31,27 +31,6 @@ Rentang suhu: −55°C hingga +150°C
 
 Output berupa tegangan analog yang dibaca melalui pin A0 Arduino.
 
-Rumus dasar:
-
-𝑉
-𝑜
-𝑢
-𝑡
-=
-𝑆
-𝑢
-ℎ
-𝑢
-×
-10
- 
-𝑚
-𝑉
-V
-out
-	​
-
-=Suhu×10mV
 3. Peralatan
 
 Laptop
@@ -100,8 +79,7 @@ Membuka Serial Monitor untuk melihat hasil pembacaan suhu.
 6. Screenshot Prosedur Praktikum
 
 
-
-WhatsApp Image 2025-11-21 at 02 58 36_a87aa0a2](https://github.com/user-attachments/assets/94b8711e-b955-47d0-840e-1c0fc9d3fcf0
+![WhatsApp Image 2025-11-21 at 02 58 35_44edf7ba](https://github.com/user-attachments/assets/1a5e2838-77fb-48ed-912f-25430dacc4ef)
 
 
 7. Source Code Arduino
