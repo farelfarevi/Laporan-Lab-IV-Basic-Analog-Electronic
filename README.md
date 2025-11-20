@@ -5,19 +5,20 @@ Mata Kuliah: LAB IV Basic Analog Electronic
 
 1. Tujuan Praktikum
 
-Tujuan praktikum ini adalah:
+Tujuan dari praktikum ini adalah:
 
 Mengetahui cara kerja sensor suhu LM35.
 
-Mengetahui cara kerja Arduino dalam membaca nilai suhu.
+Memahami cara kerja Arduino dalam membaca sensor analog.
 
-Menguji apakah source code dapat terkirim dan bekerja dengan baik di Arduino.
+Menguji keterkiriman program ke Arduino.
 
-Mengamati perubahan nilai suhu melalui Serial Monitor.
+Mengamati hasil pembacaan suhu melalui Serial Monitor.
 
 2. Teori
 
-LM35 adalah sensor suhu analog yang mengubah temperatur menjadi tegangan listrik yang berbanding lurus (linier). Setiap 1°C menghasilkan 10 mV, sehingga mudah diolah menggunakan Arduino.
+LM35 adalah sensor suhu analog yang menghasilkan tegangan keluaran 10 mV untuk setiap 1°C.
+Sensor ini sangat mudah digunakan dengan Arduino karena sifat outputnya linier.
 
 Karakteristik LM35:
 
@@ -27,9 +28,17 @@ Tegangan kerja: 4–30 V
 
 Akurasi: ±0.5°C pada 25°C
 
-Rentang suhu: −55°C hingga +150°C
+Rentang suhu: −55°C sampai +150°C
 
-Output berupa tegangan analog yang dibaca melalui pin A0 Arduino.
+Rumus dasar LM35:
+
+Vout (mV) = Suhu (°C) × 10
+
+
+Konversi pembacaan ke suhu pada Arduino:
+
+voltage = (sensorValue × 5.0) / 1023
+temperature = voltage × 100
 
 3. Peralatan
 
@@ -41,49 +50,47 @@ Kabel USB
 
 Breadboard
 
-Sensor Suhu LM35
+Sensor LM35
 
 Kabel jumper
 
 4. Rangkaian Praktikum
 
-Pin LM35:
+Koneksi LM35:
 
-VCC → 5V Arduino
+Pin 1 → 5V Arduino  
+Pin 2 → A0 Arduino  
+Pin 3 → GND Arduino
 
-Vout → A0 Arduino
 
-GND → GND Arduino
+Diagram simple:
 
-Diagram sederhana:
-
-      LM35
-   [1] [2] [3]
-    |   |   |
-   5V  A0  GND
+LM35
+[1]---5V
+[2]---A0
+[3]---GND
 
 5. Prosedur Praktikum
 
-Menyiapkan Arduino, LM35, breadboard, dan laptop.
+Menyiapkan Arduino, LM35, dan breadboard.
 
-Membuka Arduino IDE dan menulis program pembacaan suhu.
+Membuka Arduino IDE.
 
-Merakit LM35 sesuai diagram.
+Menulis dan menyimpan program pembacaan suhu.
 
-Menghubungkan Arduino ke laptop.
+Merangkai LM35 sesuai diagram.
 
 Mengupload program ke Arduino.
 
-Membuka Serial Monitor untuk melihat hasil pembacaan suhu.
+Membuka Serial Monitor untuk melihat hasil suhu.
 
-6. Screenshot Prosedur Praktikum
+6. Screenshot Praktikum
 
-
-![WhatsApp Image 2025-11-21 at 02 58 35_44edf7ba](https://github.com/user-attachments/assets/1a5e2838-77fb-48ed-912f-25430dacc4ef)
-
+![WhatsApp Image 2025-11-21 at 02 58 35_dc851827](https://github.com/user-attachments/assets/a7e7c796-889a-46b3-92fc-fd3aa8ae3b92)
 
 7. Source Code Arduino
-// Mendeklarasikan pin untuk sensor LM35
+```cpp
+// Pin sensor LM35 dihubungkan ke A0
 const int LM35Pin = A0;
 
 void setup() {
@@ -94,7 +101,7 @@ void loop() {
   int sensorValue = analogRead(LM35Pin);
 
   float voltage = sensorValue * (5.0 / 1023.0); // Konversi ke tegangan
-  float temperature = voltage * 100;            // 10 mV per °C → x100
+  float temperature = voltage * 100;            // LM35 = 10mV per °C
 
   Serial.print("Temperature: ");
   Serial.print(temperature);
@@ -102,3 +109,4 @@ void loop() {
 
   delay(1000);
 }
+```
