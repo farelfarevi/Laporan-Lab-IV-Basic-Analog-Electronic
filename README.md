@@ -1,76 +1,71 @@
-LAPORAN MINGGUAN JOB 5
+LAPORAN MINGGUAN JOB 5 – LAB IV Basic Analog Electronic
 
 Nama: Farel Farevi
-
 NPM: 2410017514011
-
 Prodi: TRKJ
-
 Mata Kuliah: LAB IV Basic Analog Electronic
 
 1. Tujuan Praktikum
-Tujuan dari praktikum ini adalah untuk:
 
-Mengetahui cara kerja sensor suhu LM35
-
-Mengetahui cara kerja Arduino dengan sensor suhu LM35
-
-Menguji keterkaitan dan komunikasi antara Arduino dan sensor LM35 melalui pengujian source code
+-Tujuan dari praktikum ini adalah untuk:
+-Mengetahui cara kerja sensor suhu LM35
+-Mengetahui cara kerja Arduino dengan sensor LM35
+-Menguji keterkaitan dan komunikasi antara Arduino dan sensor LM35 melalui pengujian source code
 
 2. Teori
 Sensor suhu IC LM35 adalah komponen elektronika yang mengubah suhu menjadi sinyal tegangan analog. LM35 memiliki sensitivitas 10 mV setiap kenaikan 1°C. Sensor ini memiliki rentang kerja -55°C hingga +150°C dan outputnya dapat dibaca langsung oleh Arduino melalui pin analog.
 
 Kelebihan LM35:
 
-Rentang pengukuran yang lebar
+-Rentang pengukuran yang lebar
 
-Akurasi tinggi
+-Akurasi tinggi
 
-Output linier
+-Output linier
 
-Tidak memerlukan kalibrasi
+-Tidak memerlukan kalibrasi
 
 Formula dasar:
 Vout = Suhu × 10 mV
 
 3. Peralatan
 
-Laptop
+-Laptop
 
-Board Arduino Uno
+-Board Arduino Uno
 
-Kabel USB
+-Kabel USB
 
-Breadboard
+-Breadboard
 
-Kabel jumper
+-Kabel jumper
 
-Sensor LM35
+-Sensor LM35
 
-LDR (opsional)
+-LDR (opsional)
 
 4. Rangkaian Praktikum
 Konfigurasi sambungan sensor LM35:
 
-VCC → 5V Arduino
+-VCC → 5V Arduino
 
-Vout → A0 Arduino
+-Vout → A0 Arduino
 
-GND → GND Arduino
+-GND → GND Arduino
 
 5. Prosedur Praktikum
 
-Menyiapkan seluruh peralatan
+-Menyiapkan seluruh peralatan
 
-Membuka Arduino IDE
+-Membuka Arduino IDE
 
-Menuliskan source code pembacaan LM35
+-Menuliskan source code pembacaan LM35
 
-Merangkai sensor LM35 ke Arduino
+-Merangkai sensor LM35 ke Arduino
 
-Mengupload program
+-Mengupload program
 
-Melihat hasil pembacaan suhu pada Serial Monitor
+-Melihat hasil pembacaan suhu pada Serial Monitor
 
 6. Screenshot Prosedur Praktikum
 (prosedur1)
